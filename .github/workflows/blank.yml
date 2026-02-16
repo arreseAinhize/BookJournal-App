@@ -68,8 +68,9 @@ jobs:
             -Dsonar.projectKey=arreseAinhize_BookJournal-App \
             -Dsonar.organization=arreseainhize \
             -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.sources=app/src/main/java,app/src/main/kotlin \
-            -Dsonar.java.binaries=app/build/intermediates/javac/debug/classes,app/build/tmp/kotlin-classes/debug \
+            -Dsonar.sources=app/src/main/java \
+            -Dsonar.java.binaries=app/build/intermediates/javac/debug/classes \
             -Dsonar.sourceEncoding=UTF-8 \
             -Dsonar.exclusions=**/generated/**/*,**/R.java,**/BuildConfig.java \
-            -Dsonar.java.source=11
+            -Dsonar.java.source=11 \
+            -Dsonar.java.libraries=**/*.jar
