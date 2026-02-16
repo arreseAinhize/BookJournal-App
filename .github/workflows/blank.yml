@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./BookJounal  # Importante: la carpeta del proyecto
+        working-directory: ./BookJounal
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,6 +23,10 @@ jobs:
           ls -la
           echo "--- Gradle files ---"
           ls -la gradle/wrapper/ || true
+          echo "--- Build files ---"
+          cat settings.gradle.kts
+          echo "--- Root build.gradle.kts ---"
+          cat build.gradle.kts || true
       
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -50,11 +54,12 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
       
-      - name: Build and analyze
+      - name: List all tasks
+        run: ./gradlew tasks --all
+      
+      - name: Build and analyze (with sonarqube)
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_PROJECT_KEY: arreseAinhize_BookJournal-App
-          SONAR_ORGANIZATION: arreseainhize
         run: |
-          echo "Running SonarQube analysis..."
-          ./gradlew build sonar --info
+          echo "=== Running SonarQube analysis ==="
+          ./gradlew build sonarqube --info
