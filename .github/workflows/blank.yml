@@ -22,6 +22,14 @@ jobs:
         with:
           java-version: 17
           distribution: 'zulu'
+
+      - name: Create debug keystore
+        run: |
+          mkdir -p ~/.android
+          keytool -genkey -v -keystore ~/.android/debug.keystore \
+            -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=Android Debug, OU=Android, O=Google, L=Android, ST=California, C=US"
       
       - name: Cache SonarQube packages
         uses: actions/cache@v4
@@ -43,7 +51,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
       
-      - name: Build the app
+      - name: Build with Gradle
         run: ./gradlew build --info
       
       - name: Download SonarScanner
