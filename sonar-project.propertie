@@ -1,0 +1,7 @@
+sonar.projectKey=arreseAinhize_BookJournal-App
+sonar.projectName=BookJournal-App
+sonar.projectVersion=1.0
+sonar.sources=app/src/main/java
+sonar.java.binaries=app/build/intermediates/javac/debug/classes
+sonar.sourceEncoding=UTF-8
+sonar.language=java

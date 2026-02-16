@@ -13,3 +13,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# NO excluir estos archivos (comentados o eliminados)
+# !gradle/wrapper/gradle-wrapper.jar
+# !gradlew
+# !gradlew.bat
