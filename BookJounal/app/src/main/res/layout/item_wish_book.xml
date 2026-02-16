@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ELIMINADO EL SCROLLVIEW - NO SE NECESITA EN UN ITEM DE RECYCLERVIEW -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Contenedor de Imagen (PORTADA) -->
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:background="@color/gray_light"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/not_use_space"
+                android:scaleType="centerCrop"
+                android:src="@drawable/book_ribbon_24dp" />
+
+        </LinearLayout>
+
+        <!-- Contenedor de texto (TÍTULO Y AUTOR) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <!-- TÍTULO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/book_title_label"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/titleID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Título del libro"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+            <!-- AUTOR -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/book_author_label"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/authorID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Autor del libro"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+            <Button
+                android:id="@+id/btnWishDelete"
+                android:layout_width="140dp"
+                android:layout_height="42dp"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/border_blue"
+                android:text="@string/btn_WDelete"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+        <!-- Botón Editar -->
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

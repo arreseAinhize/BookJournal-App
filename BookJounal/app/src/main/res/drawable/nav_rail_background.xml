@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Color de fondo -->
+    <item>
+        <shape>
+            <solid android:color="@color/border_blue" />
+        </shape>
+    </item>
+
+    <!-- Borde DERECHO (porque está a la izquierda) -->
+    <item android:right="1dp">
+        <shape>
+            <solid android:color="@color/not_use_space" />
+        </shape>
+    </item>
+</layer-list>

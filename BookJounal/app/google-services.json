@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "595784248913",
+    "project_id": "bookjournal-paag2",
+    "storage_bucket": "bookjournal-paag2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595784248913:android:e5272ff391174532311270",
+        "android_client_info": {
+          "package_name": "eus.arreseainhize.bookjounal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595784248913-1r0o67dkoaavn8juogngcfd5gs6tgqc6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "eus.arreseainhize.bookjounal",
+            "certificate_hash": "668f93e796a18d773ff6463acc757ac71b915075"
+          }
+        },
+        {
+          "client_id": "595784248913-l86oe7aet9d037qjto8c1tptsjgm1nkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYX5-vLeZgXm_H12LXVuFaesgLlKPWNi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595784248913-l86oe7aet9d037qjto8c1tptsjgm1nkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

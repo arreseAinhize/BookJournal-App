@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Espacio para status bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:background="@color/not_use_space"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/fondo2land"
+            android:padding="16dp">
+
+            <!-- Encabezado -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/btnLogOut"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/border_blue"
+                    android:text="@string/btn_LOut" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/welcome"
+                        android:textColor="#031264"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="50dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Botones de navegación -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_RLog"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:backgroundTint="@color/border_blue"
+                    android:text="@string/btn_RLog" />
+
+                <Button
+                    android:id="@+id/btn_RSystem"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:backgroundTint="@color/border_blue"
+                    android:text="@string/btn_RSystem" />
+
+                <Button
+                    android:id="@+id/btn_BWish"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:backgroundTint="@color/border_blue"
+                    android:text="@string/btn_BWish" />
+
+                <Button
+                    android:id="@+id/btn_BInfo"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:backgroundTint="@color/border_blue"
+                    android:text="@string/btn_BInfo" />
+
+                <Button
+                    android:id="@+id/btn_bFavorite"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/border_blue"
+                    android:text="@string/btn_bFavorite" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

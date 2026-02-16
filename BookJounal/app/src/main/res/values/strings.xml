@@ -1,0 +1,171 @@
+<resources>
+    <!-- TITLES -->
+    <string name="app_name" translatable="false">Book Journal</string>
+    <string name="welcome">WELCOME</string>
+    <string name="title" translatable="false">READING JOURNAL</string>
+    <string name="search_book_title1">SEARCH THE</string>
+    <string name="search_book_title2">NEW BOOK</string>
+    <string name="search_book_title3">WISHED BOOK</string>
+    <string name="search_book_title_land">SEARCH THE NEW BOOK</string>
+    <string name="search_book_title2_land">SEARCH THE WISHED BOOK</string>
+    <string name="reading_stats_title">READING SYSTEM</string>
+    <string name="favorites_book_title">FAVORITE BOOKS</string>
+    <string name="readgin_log_title">READING LOG</string>
+    <string name="new_book_title1">INSERT LECTURE</string>
+    <string name="new_book_title2">INFORMATION</string>
+    <string name="new_book_title3">INSERT LECTURE INFORMATION</string>
+    <string name="wish_list_title">WISH LIST</string>
+    <string name="book_info_title">BOOK INFORMATION</string>
+    <string name="book_info_title1">ABOUT A BOOK</string>
+    <string name="book_info_title2">INFORMATION ABOUT A BOOK</string>
+
+    <!-- LABELS -->
+    <string name="login_welcome1">Login to</string>
+    <string name="init_account">your account</string>
+    <string name="singup_welcome1">Create</string>
+    <string name="email" translatable="false">Email: </string>
+    <string name="password">Password: </string>
+    <string name="book_title_label">Title</string>
+    <string name="book_author_label">Author</string>
+    <string name="book_lecture_data_label">Lecture data</string>
+    <string name="genre_tv">GENRE:</string>
+    <string name="isbn_tv" translatable="false">ISBN:</string>
+    <string name="title_tv">TITLE:</string>
+    <string name="author_tv">AUTHOR:</string>
+    <string name="sDate_tv">START DATE</string>
+    <string name="eDate_tv">END DATE</string>
+    <string name="lType_tv">LECTURE TYPE</string>
+    <string name="rating_tv">RATING</string>
+    <string name="bNotes_tv">NOTES</string>
+    <string name="sinopsis_tv">SYNOPSIS:</string>
+    <string name="open_menu">Open Menu</string>
+    <string name="close_menu">Close Menu</string>
+    <string name ="loading">Loading...</string>
+    <string name="closed_session_label">Closed session</string>
+    <string name="select_star">Select star value:</string>
+
+    <!-- HINTS -->
+    <string name="hint_search_book_titel">Input the book title</string>
+    <string name="hint_email">Enter your email</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="hint_password_repeat">Confirm your password</string>
+    <string name="hint_new_value">Enter new value</string>
+    <string name="hint_1star">Enter value for 1 ⭐</string>
+    <string name="hint_2star">Enter value for 2 ⭐</string>
+    <string name="hint_3star">Enter value for 3 ⭐</string>
+    <string name="hint_4star">Enter value for 4 ⭐</string>
+    <string name="hint_5star">Enter value for 5 ⭐</string>
+    <string name="img_logo">App Icon</string>
+    <string name="img_stars">Ranking Image</string>
+    <string name="img_portada">Book Cover</string>
+
+    <!-- BUTTONS -->
+    <string name="login">Log in</string>
+    <string name="singup">Sign up</string>
+    <string name="login_with_google">Log in with Google</string>
+    <string name="btn_RLog">Reading Log</string>
+    <string name="btn_RSystem">Reading System</string>
+    <string name="btn_BWish" translatable="false">Wish List</string>
+    <string name="btn_BInfo">Book Information</string>
+    <string name="btn_bFavorite">Favorite books</string>
+    <string name="search_book_label">Choose</string>
+    <string name="select">Select</string>
+    <string name="edit_value">Edit value</string>
+    <string name="save_value">Save</string>
+    <string name="info">Information</string>
+    <string name="close_value">Close</string>
+    <string name="back">Back</string>
+    <string name="btn_LOut">Log out</string>
+    <string name="btn_GBack">Go back</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_addNew">Add new</string>
+    <string name="btn_LogEdit">Edit Book</string>
+    <string name="btn_LogAdd">New book</string>
+    <string name="update">Update</string>
+    <string name="btn_WDelete">Delete</string>
+
+    <!-- ERRORS -->
+    <string name="error_complete_all_fields">Please complete all the fields</string>
+    <string name="error_password_mismatch">The passwords do not match</string>
+    <string name="error_password_length">The password must be at least 6 characters long</string>
+    <string name="error_invalid_email">Email not valid</string>
+    <string name="error_weak_password">The password is too weak</string>
+    <string name="error_user_disabled">This account has been disabled</string>
+    <string name="error_user_not_found">User not found</string>
+    <string name="error_wrong_password">Incorrect password</string>
+    <string name="error_email_already_in_use">This email is already registered</string>
+    <string name="error_network">Connection error. Check your internet</string>
+    <string name="error_unknown">Unknown error</string>
+    <string name="error_logout_msg">Error when logging out: </string>
+    <string name="error_sinopsis_notfound">Synopsis not available for this book.</string>
+    <string name="error_loading_synopsis">Error when loading synopsis</string>
+    <string name="error_conexion">Connection error</string>
+    <string name="error_user_auth">There is no authenticated user</string>
+    <string name="error_google_config">Error in Google settings</string>
+    <string name="error_google_singin">Google Sign-In not configured</string>
+    <string name="error_google_acount_not_found">The Google account could not be obtained</string>
+    <string name="error_google_Sign_In">Error in Google Sign-In: </string>
+    <string name="error_google_Firebase">App not authorized. Check SHA-1 in Firebase</string>
+    <string name="error_google_developer">Developer error. Check Web Client ID</string>
+    <string name="error_google_code">Code</string>
+    <string name="error_auth_fall">Authentication failed: </string>
+    <string name="error_Unknown">Unknown error.</string>
+    <string name="error_pass1">Passwords don\'t match</string>
+    <string name="error_pass2">The password must be at least 6 characters</string>
+    <string name="error_loading_data">Error loading data: </string>
+    <string name="error_saving_data">Error saving data: </string>
+    <string name="error_invalid_number">Please enter a valid number</string>
+    <string name="error_user_not_authenticated">User not authenticated</string>
+    <string name="error_book_data_unavailable">Error: book data unavailable</string>
+    <string name="error_select_rating">Please select a rating</string>
+    <string name="error_update_data_unavailable">Error: data unavailable for update</string>
+    <string name="error_saving_register">Error saving register</string>
+    <string name="error_updating_register">Error updating register</string>
+    <string name="error_no_google_account">There are no Google accounts available. Please add an account in Settings.</string>
+    <string name="error_google_cancelled">Login canceled</string>
+    <string name="error_google_generic">Login error with Google</string>
+    <string name="error_no_account_title">No Google Account</string>
+    <string name="error_no_account_message">To use Google Sign-In, you need to add a Google account in device settings.</string>
+    <string name="error_deleting">Error deleting book: </string>
+
+    <!-- SUCCESS MESSAGES -->
+    <string name="success_welcome">Welcome</string>
+    <string name="success_account_created">Account was created</string>
+    <string name="success_account_created1">Account was created (temporary profile)</string>
+    <string name="success_logout">Session closed successfully</string>
+    <string name="success_register_saved">Register saved successfully</string>
+    <string name="success_register_updated">Register updated successfully</string>
+
+    <!-- ALERT DIALOG -->
+    <string name="alertTitle">Log out</string>
+    <string name="msgConfLout">Are you sure that you want to log out?</string>
+    <string name="btnYes">Yes</string>
+    <string name="btnNo">No</string>
+
+    <!-- OTHERS -->
+    <string name="action_open_settings">Open Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_available_title">Title not available</string>
+    <string name="no_available_author">Author not available</string>
+    <string name="no_available_published">Published year not available</string>
+    <string name="no_available_isbn">ISBN not available</string>
+    <string name="no_available_sinopsis">Synopsis not available.</string>
+    <string name="save_book">Saving book...</string>
+    <string name="book_saved">✓ Saved book</string>
+    <string name="saving_data">Saving data...</string>
+    <string name="data_saved">✓ Data saved successfully</string>
+    <string name="unknown_genre">Unknown Genre</string>
+    <string name="unknown_isbn">Unknown ISBN</string>
+    <string name="unknown_title">Unknown Title</string>
+    <string name="unknown_author">Unknown Author</string>
+    <string name="no_date">No date</string>
+    <string name="no_reading_logs">No reading logs</string>
+    <string name="start_date_required">Please select start date</string>
+    <string name="end_date_required">Please select end date</string>
+    <string name="error_end_date_before_start">End date cannot be before start date</string>
+    <string name="error_invalid_date_format">Invalid date format</string>
+
+    <string name="delete_title">Delete Book</string>
+    <string name="delete_confirmation_message">Are you sure you want to delete it from your wishlist?</string>
+    <string name="delete_success">Book deleted successfully</string>
+</resources>

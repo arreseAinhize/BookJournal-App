@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/readingLogFragment"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="@string/btn_RLog" />
+
+        <item
+            android:id="@+id/readingSystemFragment"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="@string/btn_RSystem" />
+
+        <item
+            android:id="@+id/wishListFragment"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="@string/btn_BWish" />
+
+        <item
+            android:id="@+id/bookInfoFragment"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="@string/btn_BInfo" />
+
+        <item
+            android:id="@+id/favoriteBooksFragment"
+            android:icon="@android:drawable/btn_star_big_on"
+            android:title="@string/btn_bFavorite" />
+    </group>
+</menu>

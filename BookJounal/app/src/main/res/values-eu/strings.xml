@@ -1,0 +1,167 @@
+<resources>
+    <!-- TITULUAK / TITLES -->
+    <string name="welcome">ONGI ETORRI</string>
+    <string name="search_book_title1">BILATU</string>
+    <string name="search_book_title2">LIBURU BERRIA</string>
+    <string name="search_book_title3">NAHI DEN LIBURUA</string>
+    <string name="search_book_title_land">BILATU LIBURU BERRIA</string>
+    <string name="search_book_title2_land">BILATU NAHI DEN LIBURUA</string>
+    <string name="reading_stats_title">IRAKURKETA SISTEMA</string>
+    <string name="favorites_book_title">GOGOKO LIBURUAK</string>
+    <string name="readgin_log_title">IRAKURKETA ERREGISTROA</string>
+    <string name="new_book_title1">SARTU IRAKURKETA</string>
+    <string name="new_book_title2">INFORMAZIOA</string>
+    <string name="new_book_title3">SARTU IRAKURKETAREN INFORMAZIOA</string>
+    <string name="wish_list_title">NAHI IZATEKO ZERRENDA</string>
+    <string name="book_info_title">LIBURUAREN INFORMAZIOA</string>
+    <string name="book_info_title1">LIBURU BATI BURUZ</string>
+    <string name="book_info_title2">LIBURU BATEN INFORMAZIOA</string>
+
+    <!-- ETIKETAK / LABELS -->
+    <string name="login_welcome1">Saioa hasi</string>
+    <string name="init_account">zure kontuan</string>
+    <string name="singup_welcome1">Sortu</string>
+    <string name="password">Pasahitza: </string>
+    <string name="book_title_label">Izenburua</string>
+    <string name="book_author_label">Egilea</string>
+    <string name="book_lecture_data_label">Irakurketa datuak</string>
+    <string name="genre_tv">GENEROA:</string>
+    <string name="title_tv">IZENBURUA:</string>
+    <string name="author_tv">EGILEA:</string>
+    <string name="sDate_tv">HASIERA DATA</string>
+    <string name="eDate_tv">BUKAERA DATA</string>
+    <string name="lType_tv">IRAKURKETA MOTA</string>
+    <string name="rating_tv">PUNTUAZIOA</string>
+    <string name="bNotes_tv">OHARRAK</string>
+    <string name="sinopsis_tv">SINOPSIA:</string>
+    <string name="open_menu">Ireki Menua</string>
+    <string name="close_menu">Itxi Menua</string>
+    <string name ="loading">Kargatzen...</string>
+    <string name="closed_session_label">Saioa itxita</string>
+    <string name="select_star">Hautatu izarraren balioa:</string>
+
+    <!-- ARGAZKIAK / IMAGES -->
+    <string name="img_logo">Aplikazioaren ikonoa</string>
+    <string name="img_stars">Puntuazioaren irudia</string>
+    <string name="img_portada">Liburuaren azala</string>
+
+    <!-- AHOLKUAK / HINTS -->
+    <string name="hint_search_book_titel">Idatzi liburuaren izenburua</string>
+    <string name="hint_email">Sartu zure posta elektronikoa</string>
+    <string name="hint_password">Sartu zure pasahitza</string>
+    <string name="hint_password_repeat">Berretsi zure pasahitza</string>
+    <string name="hint_new_value">Sartu balio berria</string>
+    <string name="hint_1star">Sartu 1 ⭐-ren balioa</string>
+    <string name="hint_2star">Sartu 2 ⭐-ren balioa</string>
+    <string name="hint_3star">Sartu 3 ⭐-ren balioa</string>
+    <string name="hint_4star">Sartu 4 ⭐-ren balioa</string>
+    <string name="hint_5star">Sartu 5 ⭐-ren balioa</string>
+
+    <!-- BOTOIAK / BUTTONS -->
+    <string name="login">Hasi saioa</string>
+    <string name="singup">Erregistratu</string>
+    <string name="login_with_google">Hasi saioa Google-rekin</string>
+    <string name="btn_RLog">Irakurketa erregistroa</string>
+    <string name="btn_RSystem">Irakurketa sistema</string>
+    <string name="btn_BInfo">Liburuaren informazioa</string>
+    <string name="btn_bFavorite">Gogoko liburuak</string>
+    <string name="search_book_label">Aukeratu</string>
+    <string name="select">Hautatu</string>
+    <string name="edit_value">Editatu balioa</string>
+    <string name="save_value">Gorde</string>
+    <string name="info">Informazioa</string>
+    <string name="close_value">Itxi</string>
+    <string name="back">Atzera</string>
+    <string name="btn_LOut">Saioa itxi</string>
+    <string name="btn_GBack">Itzuli</string>
+    <string name="btn_add">Gehitu</string>
+    <string name="btn_addNew">Gehitu berria</string>
+    <string name="btn_LogEdit">Editatu liburua</string>
+    <string name="btn_LogAdd">Liburu berria</string>
+    <string name="update">Eguneratu</string>
+
+    <!-- AKATSAK / ERRORS -->
+    <string name="btn_WDelete">Ezabatu</string>
+    <string name="error_complete_all_fields">Bete eremu guztiak mesedez</string>
+    <string name="error_password_mismatch">Pasahitzak ez datoz bat</string>
+    <string name="error_password_length">Pasahitzak gutxienez 6 karaktere izan behar ditu</string>
+    <string name="error_invalid_email">Posta elektronikoa ez da baliagarria</string>
+    <string name="error_weak_password">Pasahitza ahulegia da</string>
+    <string name="error_user_disabled">Kontu hau desgaitua izan da</string>
+    <string name="error_user_not_found">Erabiltzailea ez da aurkitu</string>
+    <string name="error_wrong_password">Pasahitz okerra</string>
+    <string name="error_email_already_in_use">Posta elektroniko hau dagoeneko erregistratuta dago</string>
+    <string name="error_network">Konexio errorea. Egiaztatu zure internet</string>
+    <string name="error_unknown">Errore ezezaguna</string>
+    <string name="error_logout_msg">Errorea saioa ixterakoan: </string>
+    <string name="error_sinopsis_notfound">Sinopsia ez dago eskuragarri liburu honentzat</string>
+    <string name="error_loading_synopsis">Errorea sinopsia kargatzean</string>
+    <string name="error_conexion">Konexio errorea</string>
+    <string name="error_user_auth">Ez dago autentifikatutako erabiltzailerik</string>
+    <string name="error_google_config">Errorea Google ezarpenetan</string>
+    <string name="error_google_singin">Google Sign-In ez dago konfiguratuta</string>
+    <string name="error_google_acount_not_found">Google kontua ezin izan da lortu</string>
+    <string name="error_google_Sign_In">Errorea Google Sign-In-en: </string>
+    <string name="error_google_Firebase">Aplikazioa ez dago baimenduta. Egiaztatu SHA-1 Firebase-n</string>
+    <string name="error_google_developer">Garatzailearen errorea. Egiaztatu Web Client ID</string>
+    <string name="error_google_code">Kodea</string>
+    <string name="error_auth_fall">Autentifikazioak huts egin du: </string>
+    <string name="error_Unknown">Errore ezezaguna.</string>
+    <string name="error_pass1">Pasahitzak ez datoz bat</string>
+    <string name="error_pass2">Pasahitzak gutxienez 6 karaktere izan behar ditu</string>
+    <string name="error_loading_data">Errorea datuak kargatzean: </string>
+    <string name="error_saving_data">Errorea datuak gordetzean: </string>
+    <string name="error_invalid_number">Sartu zenbaki baliagarri bat mesedez</string>
+    <string name="error_user_not_authenticated">Erabiltzailea ez dago autentifikatuta</string>
+    <string name="error_book_data_unavailable">Errorea: liburuaren datuak ez daude eskuragarri</string>
+    <string name="error_select_rating">Mesedez, hautatu puntuazio bat</string>
+    <string name="error_update_data_unavailable">Errorea: eguneratzeko datuak ez daude eskuragarri</string>
+    <string name="error_saving_register">Errorea erregistroa gordetzean</string>
+    <string name="error_updating_register">Errorea erregistroa eguneratzean</string>
+
+    <!-- ARRAKASTA MEZUAK / SUCCESS MESSAGES -->
+    <string name="error_google_generic">Errore bat gertatu da Google-rekin saioa hastean</string>
+    <string name="error_no_account_message">Google Sign-In erabiltzeko, Google kontu bat gehitu behar duzu gailuaren ezarpenetan.</string>
+    <string name="error_deleting">Errorea liburua ezabatzean:</string>
+    <string name="success_welcome">Ongi etorri</string>
+    <string name="success_account_created">Kontua sortu da</string>
+    <string name="success_account_created1">Kontua sortu da (aldi baterako profila)</string>
+    <string name="success_logout">Saioa behar bezala itxi da</string>
+    <string name="success_register_saved">Erregistroa behar bezala gorde da</string>
+    <string name="success_register_updated">Erregistroa behar bezala eguneratu da</string>
+
+    <!-- ALERT DIALOG -->
+    <string name="alertTitle">Saioa itxi</string>
+    <string name="msgConfLout">Ziur zaude saioa itxi nahi duzula?</string>
+    <string name="btnYes">Bai</string>
+    <string name="btnNo">Ez</string>
+
+    <!-- BESTE BATZUK / OTHERS -->
+    <string name="action_open_settings">Ireki Ezarpenak</string>
+    <string name="cancel">Ezeztatu</string>
+    <string name="no_available_title">Izenburua ez dago eskuragarri</string>
+    <string name="no_available_author">Egilea ez dago eskuragarri</string>
+    <string name="no_available_published">Argitalpen urtea ez dago eskuragarri</string>
+    <string name="no_available_isbn">ISBNa ez dago eskuragarri</string>
+    <string name="no_available_sinopsis">Sinopsia ez dago eskuragarri.</string>
+    <string name="save_book">Liburua gordetzen...</string>
+    <string name="book_saved">✓ Liburua gorde da</string>
+    <string name="saving_data">Datuak gordetzen...</string>
+    <string name="data_saved">✓ Datuak behar bezala gorde dira</string>
+    <string name="unknown_genre">Genero ezezaguna</string>
+    <string name="unknown_isbn">ISBN ezezaguna</string>
+    <string name="unknown_title">Izenburu ezezaguna</string>
+    <string name="unknown_author">Egile ezezaguna</string>
+    <string name="no_date">Datarik ez</string>
+    <string name="no_reading_logs">Ez dago irakurketa erregistrorik</string>
+    <string name="error_no_google_account">Ez dago Google konturik eskuragarri. Mesedez, gehitu kontu bat Ajustes aukeran.</string>
+    <string name="error_google_cancelled">Saioa bertan behera utzi da</string>
+    <string name="error_no_account_title">Google konturik ez</string>
+    <string name="error_invalid_date_format">Dataren formatuak ez du balio</string>
+    <string name="delete_title">Ezabatu liburua</string>
+    <string name="delete_confirmation_message">Ziur zaude zure wishlist zerrendatik ezabatu nahi duzula?</string>
+    <string name="delete_success">Liburua behar bezala ezabatu da</string>
+    <string name="start_date_required">Mesedez, hautatu hasierako data</string>
+    <string name="end_date_required">Mesedez, hautatu amaiera-data</string>
+    <string name="error_end_date_before_start">Amaiera-data ezin da hasiera-data baino lehenagokoa izan</string>
+</resources>

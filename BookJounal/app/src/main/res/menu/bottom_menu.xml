@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <!-- Registro de lectura - CUADERNO/DIARIO -->
+        <item
+            android:id="@+id/readingLogFragment"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="@string/btn_RLog" />
+
+        <!-- Sistema de lectura - ESTADÍSTICAS/GRÁFICOS -->
+        <item
+            android:id="@+id/readingSystemFragment"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="@string/btn_RSystem" />
+
+        <!-- Lista de deseos -->
+        <item
+            android:id="@+id/wishListFragment"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="@string/btn_BWish" />
+
+        <!-- Información de libro -->
+        <item
+            android:id="@+id/bookInfoFragment"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="@string/btn_BInfo" />
+
+        <!-- Libros favoritos -->
+        <item
+            android:id="@+id/favoriteBooksFragment"
+            android:icon="@android:drawable/btn_star_big_on"
+            android:title="@string/btn_bFavorite" />
+    </group>
+</menu>

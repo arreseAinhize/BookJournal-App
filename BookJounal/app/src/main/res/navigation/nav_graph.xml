@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fristFragment">
+
+    <fragment
+        android:id="@+id/fristFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.auth.FristFragment"
+        android:label="fragment_frist"
+        tools:layout="@layout/fragment_frist" >
+        <action
+            android:id="@+id/action_fristFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_fristFragment_to_singUpFragment"
+            app:destination="@id/singUpFragment" />
+        <action
+            android:id="@+id/action_fristFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.auth.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_singUpFragment"
+            app:destination="@id/singUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.auth.SingUpFragment"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_singUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_singUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_readingSystemFragment"
+            app:destination="@id/readingSystemFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_readingLogFragment"
+            app:destination="@id/readingLogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_favoriteBooksFragment"
+            app:destination="@id/favoriteBooksFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_wishListFragment"
+            app:destination="@id/wishListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fristFragment"
+            app:destination="@id/fristFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingSystemFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.reading.ReadingSystemFragment"
+        android:label="fragment_reading_system"
+        tools:layout="@layout/fragment_reading_system" >
+        <action
+            android:id="@+id/action_readingSystemFragment_to_fristFragment"
+            app:destination="@id/fristFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingLogFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.reading.ReadingLogFragment"
+        android:label="fragment_reading_log"
+        tools:layout="@layout/fragment_reading_log" >
+        <action
+            android:id="@+id/action_readingLogFragment_to_addBookLogFragment"
+            app:destination="@id/addBookLogFragment" />
+        <action
+            android:id="@+id/action_readingLogFragment_to_fristFragment"
+            app:destination="@id/fristFragment" />
+        <action
+            android:id="@+id/action_readingLogFragment_to_logBookInfoFragment"
+            app:destination="@id/logBookInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteBooksFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.books.FavoriteBooksFragment"
+        android:label="fragment_favorite_books"
+        tools:layout="@layout/fragment_favorite_books" >
+        <action
+            android:id="@+id/action_favoriteBooksFragment_to_fristFragment"
+            app:destination="@id/fristFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.wishlist.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" >
+        <action
+            android:id="@+id/action_wishListFragment_to_searchWishBookFragment"
+            app:destination="@id/searchWishBookFragment" />
+        <action
+            android:id="@+id/action_wishListFragment_to_fristFragment"
+            app:destination="@id/fristFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookInfoFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.books.BookInfoFragment"
+        android:label="fragment_book_info"
+        tools:layout="@layout/fragment_book_info" >
+        <action
+            android:id="@+id/action_bookInfoFragment_to_showBookInfoFragment"
+            app:destination="@id/showBookInfoFragment" />
+        <action
+            android:id="@+id/action_bookInfoFragment_to_fristFragment"
+            app:destination="@id/fristFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookLogFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.reading.AddBookLogFragment"
+        android:label="fragment_add_book_log"
+        tools:layout="@layout/fragment_add_book_log" >
+        <action
+            android:id="@+id/action_addBookLogFragment_to_readingLogFragment"
+            app:destination="@id/readingLogFragment" />
+        <action
+            android:id="@+id/action_addBookLogFragment_to_logBookInfoFragment"
+            app:destination="@id/logBookInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logBookInfoFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.reading.LogBookInfoFragment"
+        android:label="fragment_log_book_info"
+        tools:layout="@layout/fragment_log_book_info" >
+        <action
+            android:id="@+id/action_logBookInfoFragment_to_readingLogFragment"
+            app:destination="@id/readingLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showBookInfoFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.books.ShowBookInfoFragment"
+        android:label="fragment_show_book_info"
+        tools:layout="@layout/fragment_show_book_info" >
+        <action
+            android:id="@+id/action_showBookInfoFragment_to_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchWishBookFragment"
+        android:name="eus.arreseainhize.bookjounal.fragments.wishlist.SearchWishBookFragment"
+        android:label="fragment_search_wish_book"
+        tools:layout="@layout/fragment_search_wish_book" >
+        <action
+            android:id="@+id/action_searchWishBookFragment_to_wishListFragment"
+            app:destination="@id/wishListFragment" />
+    </fragment>
+</navigation>

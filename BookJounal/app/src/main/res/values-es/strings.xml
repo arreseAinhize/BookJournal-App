@@ -1,0 +1,167 @@
+<resources>
+    <!-- TÍTULOS / TITLES -->
+    <string name="welcome">BIENVENIDO</string>
+    <string name="search_book_title1">BUSCA EL</string>
+    <string name="search_book_title2">NUEVO LIBRO</string>
+    <string name="search_book_title3">LIBRO DESEADO</string>
+    <string name="search_book_title_land">BUSCA EL NUEVO LIBRO</string>
+    <string name="search_book_title2_land">BUSCA EL LIBRO DESEADO</string>
+    <string name="reading_stats_title">SISTEMA DE LECTURA</string>
+    <string name="favorites_book_title">LIBROS FAVORITOS</string>
+    <string name="readgin_log_title">REGISTRO DE LECTURA</string>
+    <string name="new_book_title1">INSERTAR INFORMACIÓN</string>
+    <string name="new_book_title2">DE LECTURA</string>
+    <string name="new_book_title3">INSERTAR INFORMACIÓN DE LECTURA</string>
+    <string name="wish_list_title">LISTA DE DESEOS</string>
+    <string name="book_info_title">INFORMACIÓN DEL LIBRO</string>
+    <string name="book_info_title1">SOBRE UN LIBRO</string>
+    <string name="book_info_title2">INFORMACIÓN SOBRE UN LIBRO</string>
+
+    <!-- ETIQUETAS / LABELS -->
+    <string name="login_welcome1">Inicia sesión en</string>
+    <string name="init_account">tu cuenta</string>
+    <string name="singup_welcome1">Crea</string>
+    <string name="password">Contraseña: </string>
+    <string name="book_title_label">Título</string>
+    <string name="book_author_label">Autor</string>
+    <string name="book_lecture_data_label">Datos de lectura</string>
+    <string name="genre_tv">GÉNERO:</string>
+    <string name="title_tv">TÍTULO:</string>
+    <string name="author_tv">AUTOR:</string>
+    <string name="sDate_tv">FECHA INICIO</string>
+    <string name="eDate_tv">FECHA FIN</string>
+    <string name="lType_tv">TIPO DE LECTURA</string>
+    <string name="rating_tv">PUNTUACIÓN</string>
+    <string name="bNotes_tv">NOTAS</string>
+    <string name="sinopsis_tv">SINOPSIS:</string>
+    <string name="open_menu">Abrir Menú</string>
+    <string name="close_menu">Cerrar Menú</string>
+    <string name ="loading">Cargando...</string>
+    <string name="closed_session_label">Sesión cerrada</string>
+    <string name="select_star">Selecciona valor de estrella:</string>
+
+    <!-- IMÁGENES / IMAGES -->
+    <string name="img_logo">Icono de la app</string>
+    <string name="img_stars">Imagen de puntuación</string>
+    <string name="img_portada">Portada del libro</string>
+
+    <!-- AYUDAS / HINTS -->
+    <string name="hint_search_book_titel">Introduce el título del libro</string>
+    <string name="hint_email">Introduce tu email</string>
+    <string name="hint_password">Introduce tu contraseña</string>
+    <string name="hint_password_repeat">Confirma tu contraseña</string>
+    <string name="hint_new_value">Introduce nuevo valor</string>
+    <string name="hint_1star">Introduce valor para 1 ⭐</string>
+    <string name="hint_2star">Introduce valor para 2 ⭐</string>
+    <string name="hint_3star">Introduce valor para 3 ⭐</string>
+    <string name="hint_4star">Introduce valor para 4 ⭐</string>
+    <string name="hint_5star">Introduce valor para 5 ⭐</string>
+
+    <!-- BOTONES / BUTTONS -->
+    <string name="login">Iniciar sesión</string>
+    <string name="singup">Registrarse</string>
+    <string name="login_with_google">Inicia sesión con Google</string>
+    <string name="btn_RLog">Registro de lectura</string>
+    <string name="btn_RSystem">Sistema de lectura</string>
+    <string name="btn_BInfo">Información del libro</string>
+    <string name="btn_bFavorite">Libros favoritos</string>
+    <string name="search_book_label">Elegir</string>
+    <string name="select">Seleccionar</string>
+    <string name="edit_value">Editar valor</string>
+    <string name="save_value">Guardar</string>
+    <string name="info">Información</string>
+    <string name="close_value">Cerrar</string>
+    <string name="back">Atrás</string>
+    <string name="btn_LOut">Cerrar sesión</string>
+    <string name="btn_GBack">Volver</string>
+    <string name="btn_add">Añadir</string>
+    <string name="btn_addNew">Añadir nuevo</string>
+    <string name="btn_LogEdit">Editar libro</string>
+    <string name="btn_LogAdd">Nuevo libro</string>
+    <string name="update">Actualizar</string>
+
+    <!-- ERRORES / ERRORS -->
+    <string name="btn_WDelete">Eliminar</string>
+    <string name="error_complete_all_fields">Por favor completa todos los campos</string>
+    <string name="error_password_mismatch">Las contraseñas no coinciden</string>
+    <string name="error_password_length">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_invalid_email">Email no válido</string>
+    <string name="error_weak_password">La contraseña es demasiado débil</string>
+    <string name="error_user_disabled">Esta cuenta ha sido deshabilitada</string>
+    <string name="error_user_not_found">Usuario no encontrado</string>
+    <string name="error_wrong_password">Contraseña incorrecta</string>
+    <string name="error_email_already_in_use">Este email ya está registrado</string>
+    <string name="error_network">Error de conexión. Verifica tu internet</string>
+    <string name="error_unknown">Error desconocido</string>
+    <string name="error_logout_msg">Error al cerrar sesión: </string>
+    <string name="error_sinopsis_notfound">Sinopsis no disponible para este libro</string>
+    <string name="error_loading_synopsis">Error al cargar la sinopsis</string>
+    <string name="error_conexion">Error de conexión</string>
+    <string name="error_user_auth">No hay usuario autenticado</string>
+    <string name="error_google_config">Error en configuración de Google</string>
+    <string name="error_google_singin">Google Sign-In no configurado</string>
+    <string name="error_google_acount_not_found">No se pudo obtener la cuenta de Google</string>
+    <string name="error_google_Sign_In">Error en Google Sign-In: </string>
+    <string name="error_google_Firebase">App no autorizada. Verifica SHA-1 en Firebase</string>
+    <string name="error_google_developer">Error del desarrollador. Verifica Web Client ID</string>
+    <string name="error_google_code">Código</string>
+    <string name="error_auth_fall">Autenticación fallida: </string>
+    <string name="error_Unknown">Error desconocido.</string>
+    <string name="error_pass1">Las contraseñas no coinciden</string>
+    <string name="error_pass2">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_loading_data">Error al cargar datos: </string>
+    <string name="error_saving_data">Error al guardar datos: </string>
+    <string name="error_invalid_number">Por favor introduce un número válido</string>
+    <string name="error_user_not_authenticated">Usuario no autenticado</string>
+    <string name="error_book_data_unavailable">Error: datos del libro no disponibles</string>
+    <string name="error_select_rating">Por favor selecciona una puntuación</string>
+    <string name="error_update_data_unavailable">Error: datos no disponibles para actualizar</string>
+    <string name="error_saving_register">Error al guardar el registro</string>
+    <string name="error_updating_register">Error al actualizar el registro</string>
+    <string name="error_no_google_account">No hay cuentas de Google disponibles. Por favor, añade una cuenta en Ajustes.</string>
+    <string name="error_google_cancelled">Inicio de sesión cancelado</string>
+    <string name="error_google_generic">Error en inicio de sesión con Google</string>
+
+    <!-- MENSAJES DE ÉXITO / SUCCESS MESSAGES -->
+    <string name="error_no_account_message">Para usar el inicio de sesión de Google, debes agregar una cuenta de Google en la configuración del dispositivo.</string>
+    <string name="error_deleting">Error borrando libro:</string>
+    <string name="success_welcome">Bienvenido</string>
+    <string name="success_account_created">Cuenta creada</string>
+    <string name="success_account_created1">Cuenta creada (perfil temporal)</string>
+    <string name="success_logout">Sesión cerrada correctamente</string>
+    <string name="success_register_saved">Registro guardado correctamente</string>
+    <string name="success_register_updated">Registro actualizado correctamente</string>
+
+    <!-- DIÁLOGO DE ALERTA / ALERT DIALOG -->
+    <string name="alertTitle">Cerrar sesión</string>
+    <string name="msgConfLout">¿Estás seguro de que quieres cerrar sesión?</string>
+    <string name="btnYes">Sí</string>
+    <string name="btnNo">No</string>
+
+    <!-- OTROS / OTHERS -->
+    <string name="action_open_settings">Abre Configuración</string>
+    <string name="cancel">Cancelar</string>
+    <string name="no_available_title">Título no disponible</string>
+    <string name="no_available_author">Autor no disponible</string>
+    <string name="no_available_published">Año de publicación no disponible</string>
+    <string name="no_available_isbn">ISBN no disponible</string>
+    <string name="no_available_sinopsis">Sinopsis no disponible.</string>
+    <string name="save_book">Guardando libro...</string>
+    <string name="book_saved">✓ Libro guardado</string>
+    <string name="saving_data">Guardando datos...</string>
+    <string name="data_saved">✓ Datos guardados correctamente</string>
+    <string name="unknown_genre">Género desconocido</string>
+    <string name="unknown_isbn">ISBN desconocido</string>
+    <string name="unknown_title">Título desconocido</string>
+    <string name="unknown_author">Autor desconocido</string>
+    <string name="no_date">Sin fecha</string>
+    <string name="no_reading_logs">No hay registros de lectura</string>
+    <string name="error_no_account_title">Sin cuenta de Google</string>
+    <string name="error_invalid_date_format">Formato de fecha inválida</string>
+    <string name="delete_title">Borrar libro</string>
+    <string name="delete_confirmation_message">¿Está seguro de que desea eliminarlo de su lista de deseos?</string>
+    <string name="delete_success">Libro eliminado con éxito</string>
+    <string name="start_date_required">Seleccione fecha de inicio</string>
+    <string name="end_date_required">Seleccione fecha de finalización</string>
+    <string name="error_end_date_before_start">La fecha de finalización no puede ser antes de la fecha de inicio</string>
+</resources>
