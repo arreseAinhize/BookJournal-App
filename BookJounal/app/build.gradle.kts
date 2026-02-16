@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)  // AÑADIDO
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
 }
 
@@ -21,9 +21,25 @@ android {
         manifestPlaceholders["authRedirectScheme"] = "eus.arreseainhize.bookjounal"
     }
 
+    signingConfigs {
+        // Configurar debug solo si no existe
+        val debugKeystore = file("${System.getProperty("user.home")}${File.separator}.android${File.separator}debug.keystore")
+        if (debugKeystore.exists()) {
+            // En lugar de crear nuevo, modificar el existente
+            getByName("debug") {
+                storeFile = debugKeystore
+                storePassword = "android"
+                keyAlias = "androiddebugkey"
+                keyPassword = "android"
+            }
+        }
+    }
+
     buildTypes {
         debug {
             isDebuggable = true
+            // Usar la configuración debug existente
+            signingConfig = signingConfigs.getByName("debug")
         }
         release {
             isMinifyEnabled = false
@@ -39,27 +55,20 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-
     buildFeatures {
         viewBinding = true
     }
+}
 
-    signingConfigs {
-        getByName("debug") {
-            storeFile = file("${System.getProperty("user.home")}${File.separator}.android${File.separator}debug.keystore")
-            storePassword = "android"
-            keyAlias = "androiddebugkey"
-            keyPassword = "android"
-        }
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
     }
 }
 
 dependencies {
     // AndroidX Core
-    implementation(libs.androidx.core.ktx)  // AÑADIDO
+    implementation(libs.androidx.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -68,39 +77,14 @@ dependencies {
     // Navigation
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
-    implementation(libs.navigation.fragment.ktx)  // AÑADIDO
-    implementation(libs.navigation.ui.ktx)        // AÑADIDO
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
 
     // Firebase BOM
     implementation(platform(libs.firebase.bom))
-
-    // Firebase Authentication
     implementation(libs.firebase.auth)
-    implementation("com.google.firebase:firebase-auth")  // O usa tu referencia
-
-    // Google Play Services Auth (para login con Google)
-    implementation(libs.play.services.auth)  // AÑADIDO
-
-    // Firebase Firestore
+    implementation(libs.play.services.auth)
     implementation("com.google.firebase:firebase-firestore")
-
-    // Firebase Realtime Database (si lo usas)
-    implementation("com.google.firebase:firebase-database")
-
-    // Firebase UI (opcional)
-    implementation("com.firebaseui:firebase-ui-auth:8.0.2")
-    implementation("com.firebaseui:firebase-ui-firestore:8.0.2")
-
-    // Credential Manager (API oficial y moderna)
-    implementation("androidx.credentials:credentials:1.3.0")
-    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
-    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
-
-    // Google Play Services Base
-    implementation("com.google.android.gms:play-services-base:18.5.0")
-
-    // Browser support (necesario para OAuth web)
-    implementation("androidx.browser:browser:1.7.0")
 
     // Retrofit
     implementation(libs.retrofit)
@@ -108,6 +92,7 @@ dependencies {
 
     // Glide
     implementation(libs.glide)
+    implementation(libs.googleid)
     annotationProcessor(libs.compiler)
 
     // Testing

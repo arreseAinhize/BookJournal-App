@@ -20,14 +20,17 @@ public class ReadingViewModel extends ViewModel {
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+    private final String collection = "usuarios";
+    private final String subCollectionRL = "reading_logs";
+
     public LiveData<Boolean> saveReadingLog(ReadingLog readingLog) {
         MutableLiveData<Boolean> result = new MutableLiveData<>();
 
         String userId = mAuth.getCurrentUser().getUid();
 
-        db.collection("usuarios")
+        db.collection(collection)
                 .document(userId)
-                .collection("reading_logs")
+                .collection(subCollectionRL)
                 .add(readingLog)
                 .addOnSuccessListener(documentReference -> {
                     // Guardamos el ID del documento en el objeto para referencia futura
@@ -44,9 +47,9 @@ public class ReadingViewModel extends ViewModel {
     public LiveData<List<ReadingLog>> getUserReadingLogs(String userId) {
         MutableLiveData<List<ReadingLog>> logsLiveData = new MutableLiveData<>();
 
-        db.collection("usuarios")
+        db.collection(collection)
                 .document(userId)
-                .collection("reading_logs")
+                .collection(subCollectionRL)
                 .orderBy("timestamp", Query.Direction.DESCENDING)
                 .get()
                 .addOnCompleteListener(task -> {
@@ -70,9 +73,9 @@ public class ReadingViewModel extends ViewModel {
         MutableLiveData<Boolean> result = new MutableLiveData<>();
         String userId = mAuth.getCurrentUser().getUid();
 
-        db.collection("usuarios")
+        db.collection(collection)
                 .document(userId)
-                .collection("reading_logs")
+                .collection(subCollectionRL)
                 .document(documentId)
                 .set(updatedLog)
                 .addOnSuccessListener(aVoid -> {
@@ -88,9 +91,9 @@ public class ReadingViewModel extends ViewModel {
         MutableLiveData<Boolean> result = new MutableLiveData<>();
         String userId = mAuth.getCurrentUser().getUid();
 
-        db.collection("usuarios")
+        db.collection(collection)
                 .document(userId)
-                .collection("reading_logs")
+                .collection(subCollectionRL)
                 .document(documentId)
                 .delete()
                 .addOnSuccessListener(aVoid -> result.setValue(true))
@@ -102,9 +105,9 @@ public class ReadingViewModel extends ViewModel {
     public LiveData<List<FavoriteBooks>> getFavoriteBooks(String userId){
         MutableLiveData<List<FavoriteBooks>> favsLiveData = new MutableLiveData<>();
 
-        db.collection("usuarios")
+        db.collection(collection)
                 .document(userId)
-                .collection("reading_logs")
+                .collection(subCollectionRL)
                 .orderBy("rating", Query.Direction.DESCENDING)
                 .get()
                 .addOnCompleteListener(task -> {

@@ -39,12 +39,12 @@ import eus.arreseainhize.bookjounal.viewmodels.BookViewModel;
 
 public class BookInfoFragment extends Fragment {
 
-    private FirebaseAuth mAuth;
     private FragmentBookInfoBinding binding;
     private BookViewModel bookViewModel;
     private ContentsAdapterBI contentsAdapter;
     private Handler searchHandler;
     private Runnable searchRunnable;
+    private final String TAG = "BookInfoFragment";
 
     // Mapa para almacenar las sinopsis temporalmente
     private Map<String, String> synopsisMap = new HashMap<>();
@@ -52,7 +52,7 @@ public class BookInfoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -72,7 +72,7 @@ public class BookInfoFragment extends Fragment {
         // VERIFICAR QUE EL BINDING NO ES NULL
         // ============================================================
         if (binding == null) {
-            Log.e("BookInfoFragment", "❌ ERROR: binding es null");
+            Log.e(TAG, "❌ ERROR: binding es null");
             return;
         }
 
@@ -90,16 +90,16 @@ public class BookInfoFragment extends Fragment {
                         .setNegativeButton(R.string.btnNo, null)
                         .show();
             });
-            Log.d("BookInfoFragment", "✅ btnBack configurado correctamente");
+            Log.d(TAG, "✅ btnBack configurado correctamente");
         } else {
-            Log.e("BookInfoFragment", "❌ ERROR: btnBack es null en el layout");
+            Log.e(TAG, "❌ ERROR: btnBack es null en el layout");
         }
 
         // ============================================================
         // VERIFICAR QUE EL RECYCLERVIEW EXISTE
         // ============================================================
         if (binding.recyclerviewWScontents == null) {
-            Log.e("BookInfoFragment", "❌ ERROR: recyclerviewWScontents es null");
+            Log.e(TAG, "❌ ERROR: recyclerviewWScontents es null");
             return;
         }
 
@@ -114,7 +114,7 @@ public class BookInfoFragment extends Fragment {
         // VERIFICAR QUE EL SEARCHVIEW EXISTE
         // ============================================================
         if (binding.text == null) {
-            Log.e("BookInfoFragment", "❌ ERROR: SearchView (text) es null");
+            Log.e(TAG, "❌ ERROR: SearchView (text) es null");
             return;
         }
 
@@ -123,7 +123,7 @@ public class BookInfoFragment extends Fragment {
 
         // Observar los cambios en los datos (resultados de búsqueda)
         bookViewModel.volumeInfoLiveData.observe(getViewLifecycleOwner(), volumeInfos -> {
-            Log.d("BookInfoFragment", "Observando datos: " + (volumeInfos != null ? volumeInfos.size() : 0));
+            Log.d(TAG, "Observando datos: " + (volumeInfos != null ? volumeInfos.size() : 0));
             if (volumeInfos != null && !volumeInfos.isEmpty()) {
                 contentsAdapter.establishContentList(volumeInfos);
             } else {
@@ -170,7 +170,7 @@ public class BookInfoFragment extends Fragment {
     private void performSearch(String queryText) {
         if (queryText != null && !queryText.trim().isEmpty()) {
             bookViewModel.search(queryText.trim());
-            Log.d("BookInfoFragment", "Buscando: " + queryText);
+            Log.d(TAG, "Buscando: " + queryText);
         }
     }
 

@@ -1,6 +1,6 @@
 [versions]
 agp = "8.13.2"
-kotlin = "1.9.0"  # AÑADIDO: versión de Kotlin
+kotlin = "2.3.10"  # AÑADIDO: versión de Kotlin
 junit = "4.13.2"
 junitVersion = "1.3.0"
 espressoCore = "3.7.0"
@@ -17,6 +17,8 @@ converterGson = "2.9.0"
 googleGmsGoogleServices = "4.4.2"
 firebaseBom = "33.1.1"
 firebaseAuth = "24.0.1"
+sonarqube = "4.4.1.3373"
+googleid = "1.2.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -44,8 +46,10 @@ google-firebase-auth = { group = "com.google.firebase", name = "firebase-auth", 
 
 # AÑADIDO: Google Play Services Auth
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version = "21.2.0" }
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }  # AÑADIDO
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+sonarqube = { id = "org.sonarqube", version.ref = "sonarqube" }

@@ -21,7 +21,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BookViewModel extends AndroidViewModel {
-
+    private final String Tag = "BookViewModel";
     public MutableLiveData<List<Book.VolumeInfo>> volumeInfoLiveData = new MutableLiveData<>();
 
     // NUEVO: LiveData para las sinopsis
@@ -34,7 +34,7 @@ public class BookViewModel extends AndroidViewModel {
     // En BookViewModel.java, modifica el método search:
 
     public void search(String query) {
-        Log.d("ViewModel.search", "Buscando en Open Library: " + query);
+        Log.d(Tag, "Buscando en Open Library: " + query);
 
         if (query == null || query.isEmpty() || query.trim().length() < 2) {
             volumeInfoLiveData.postValue(new ArrayList<>());
@@ -71,7 +71,7 @@ public class BookViewModel extends AndroidViewModel {
                             }
                         }
 
-                        Log.d("ViewModel", "Resultados encontrados: " + volumeInfos.size());
+                        Log.d(Tag, "Resultados encontrados: " + volumeInfos.size());
 
                         // Limpiar mapa de sinopsis antes de nueva búsqueda
                         synopsisMap.postValue(new HashMap<>());
@@ -95,7 +95,7 @@ public class BookViewModel extends AndroidViewModel {
             @Override
             public void onFailure(@NonNull Call<Book.BookResponse> call, @NonNull Throwable t) {
                 volumeInfoLiveData.postValue(new ArrayList<>());
-                Log.e("ViewModel", "Error de conexión: " + t.getMessage());
+                Log.e(Tag, "Error de conexión: " + t.getMessage());
             }
         });
     }
@@ -124,14 +124,14 @@ public class BookViewModel extends AndroidViewModel {
                     String synopsis = response.body().getDescriptionText();
                     if (synopsis != null && !synopsis.isEmpty()) {
                         map.put(volumeInfo.title, synopsis);
-                        Log.d("ViewModel", "✅ Sinopsis obtenida para: " + volumeInfo.title);
+                        Log.d(Tag, "✅ Sinopsis obtenida para: " + volumeInfo.title);
                     } else {
                         map.put(volumeInfo.title, String.valueOf(R.string.no_available_sinopsis));
-                        Log.d("ViewModel", "⚠️ Sinopsis vacía para: " + volumeInfo.title);
+                        Log.d(Tag, "⚠️ Sinopsis vacía para: " + volumeInfo.title);
                     }
                 } else {
                     map.put(volumeInfo.title, String.valueOf(R.string.error_loading_synopsis));
-                    Log.e("ViewModel", "❌ Error obteniendo sinopsis para: " + volumeInfo.title);
+                    Log.e(Tag, "❌ Error obteniendo sinopsis para: " + volumeInfo.title);
                 }
                 synopsisMap.postValue(map);
             }
@@ -142,7 +142,7 @@ public class BookViewModel extends AndroidViewModel {
                 if (map == null) map = new HashMap<>();
                 map.put(volumeInfo.title, String.valueOf(R.string.error_conexion));
                 synopsisMap.postValue(map);
-                Log.e("ViewModel", "❌ Error de conexión: " + t.getMessage());
+                Log.e(Tag, "❌ Error de conexión: " + t.getMessage());
             }
         });
     }
