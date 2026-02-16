@@ -43,7 +43,25 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
       
-      - name: Build and analyze
+      - name: Build the app
+        run: ./gradlew build --info
+      
+      - name: Download SonarScanner
+        run: |
+          wget -q https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+          unzip -q sonar-scanner-cli-5.0.1.3006-linux.zip
+          echo "$PWD/sonar-scanner-5.0.1.3006-linux/bin" >> $GITHUB_PATH
+      
+      - name: Run SonarQube analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew build sonarqube --info
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=arreseAinhize_BookJournal-App \
+            -Dsonar.organization=arreseainhize \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.sources=app/src/main/java,app/src/main/kotlin \
+            -Dsonar.java.binaries=app/build/intermediates/javac/debug/classes,app/build/tmp/kotlin-classes/debug \
+            -Dsonar.sourceEncoding=UTF-8 \
+            -Dsonar.exclusions=**/generated/**/*,**/R.java,**/BuildConfig.java \
+            -Dsonar.java.source=11
