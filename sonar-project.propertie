@@ -1,7 +1,18 @@
 sonar.projectKey=arreseAinhize_BookJournal-App
-sonar.projectName=BookJournal-App
-sonar.projectVersion=1.0
-sonar.sources=app/src/main/java
-sonar.java.binaries=app/build/intermediates/javac/debug/classes
+sonar.organization=arreseainhize
+sonar.host.url=https://sonarcloud.io
+
+# Source directories
+sonar.sources=app/src/main/java,app/src/main/kotlin
+sonar.java.binaries=app/build/intermediates/javac/debug/classes,app/build/tmp/kotlin-classes/debug
+
+# Language support
+sonar.language=java,kotlin
+sonar.java.source=11
+sonar.kotlin.jvmTarget=11
+
+# Encoding
 sonar.sourceEncoding=UTF-8
-sonar.language=java
+
+# Exclude generated files
+sonar.exclusions=**/generated/**/*,**/R.java,**/BuildConfig.java
