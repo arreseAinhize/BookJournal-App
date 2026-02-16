@@ -60,17 +60,40 @@ jobs:
           unzip -q sonar-scanner-cli-5.0.1.3006-linux.zip
           echo "$PWD/sonar-scanner-5.0.1.3006-linux/bin" >> $GITHUB_PATH
       
+      - name: Debug - Find compiled classes
+        run: |
+          echo "=== Looking for compiled classes ==="
+          find app/build -type d -name "classes" 2>/dev/null || echo "No classes directory found"
+          echo "=== Full build intermediates ==="
+          ls -la app/build/intermediates/ || echo "No intermediates"
+          ls -la app/build/intermediates/javac/ || echo "No javac"
+      
       - name: Run SonarQube analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
+          # Intentar diferentes rutas posibles para los binarios
+          if [ -d "app/build/intermediates/javac/debug/classes" ]; then
+            BINARIES="app/build/intermediates/javac/debug/classes"
+          elif [ -d "app/build/intermediates/javac/debug" ]; then
+            BINARIES="app/build/intermediates/javac/debug"
+          elif [ -d "app/build/intermediates/classes/debug" ]; then
+            BINARIES="app/build/intermediates/classes/debug"
+          elif [ -d "app/build/classes/java/main" ]; then
+            BINARIES="app/build/classes/java/main"
+          else
+            # Si no encuentra, usar el primero que encuentre
+            BINARIES=$(find app/build -path "*/classes" -type d | head -1)
+          fi
+          
+          echo "Using binaries: $BINARIES"
+          
           sonar-scanner \
             -Dsonar.projectKey=arreseAinhize_BookJournal-App \
             -Dsonar.organization=arreseainhize \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.sources=app/src/main/java \
-            -Dsonar.java.binaries=app/build/intermediates/javac/debug/classes \
+            -Dsonar.java.binaries=$BINARIES \
             -Dsonar.sourceEncoding=UTF-8 \
             -Dsonar.exclusions=**/generated/**/*,**/R.java,**/BuildConfig.java \
-            -Dsonar.java.source=11 \
-            -Dsonar.java.libraries=**/*.jar
+            -Dsonar.java.source=11
