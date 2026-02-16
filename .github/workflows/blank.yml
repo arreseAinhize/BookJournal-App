@@ -14,14 +14,16 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Debug - List files
+      - name: DEBUG - List all files after checkout
         run: |
-          echo "Current directory:"
+          echo "=== Current directory ==="
           pwd
-          echo "Files in root:"
+          echo "=== Files in root ==="
           ls -la
-          echo "Gradle wrapper files:"
-          ls -la gradle/wrapper/ || echo "No gradle/wrapper directory"
+          echo "=== Looking for gradlew ==="
+          find . -name "gradlew" -type f
+          echo "=== Directory structure ==="
+          tree -L 2 || find . -maxdepth 2 -type d | sort
       
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -48,10 +50,24 @@ jobs:
       
       - name: Make gradlew executable
         run: |
-          chmod +x gradlew
-          echo "gradlew is now executable"
+          if [ -f "gradlew" ]; then
+            chmod +x gradlew
+            echo "✅ gradlew found and made executable"
+          elif [ -f "BookJounal/gradlew" ]; then
+            cd BookJounal
+            chmod +x gradlew
+            echo "✅ gradlew found in BookJounal/ and made executable"
+          else
+            echo "❌ gradlew not found!"
+            echo "Searching everywhere..."
+            find /home/runner/work -name "gradlew" 2>/dev/null || echo "No gradlew found"
+            exit 1
+          fi
       
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew build sonar --info
+        run: |
+          cd BookJounal
+          chmod +x gradlew
+          ./gradlew build sonar --info
