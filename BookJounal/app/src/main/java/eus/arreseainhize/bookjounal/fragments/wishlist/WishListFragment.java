@@ -90,7 +90,7 @@ public class WishListFragment extends Fragment {
         };
 
         adapter = new WishlistAdapter(itemClickListener, deleteClickListener);
-        Log.d(TAG, "✅ Adapter inicializado con listeners");
+        Log.d(TAG, "Adapter inicializado con listeners");
     }
 
     @SuppressLint("StringFormatInvalid")
@@ -122,7 +122,7 @@ public class WishListFragment extends Fragment {
                 .document(item.getId())
                 .delete()
                 .addOnSuccessListener(aVoid -> {
-                    Log.d(TAG, "✅ Item eliminado: " + item.getTitle());
+                    Log.d(TAG, "Item eliminado: " + item.getTitle());
 
                     // Eliminar del adapter y ViewModel
                     adapter.removeItem(position);
@@ -135,7 +135,7 @@ public class WishListFragment extends Fragment {
                     binding.btnSearch.setEnabled(true);
                 })
                 .addOnFailureListener(e -> {
-                    Log.e(TAG, "❌ Error eliminando: " + e.getMessage());
+                    Log.e(TAG, "Error eliminando: " + e.getMessage());
                     Toast.makeText(requireContext(),
                             getString(R.string.error_deleting) + e.getMessage(),
                             Toast.LENGTH_SHORT).show();

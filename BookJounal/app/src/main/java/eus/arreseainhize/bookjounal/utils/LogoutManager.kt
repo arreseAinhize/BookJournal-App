@@ -23,7 +23,7 @@ object LogoutManager {
                 clearCredentialManager(fragment.requireContext())
                 FirebaseAuth.getInstance().signOut()
 
-                Log.d(tag, "✅ ${fragment.getString(R.string.success_logout)}")
+                Log.d(tag, "${fragment.getString(R.string.success_logout)}")
 
                 Toast.makeText(
                     fragment.requireContext(),

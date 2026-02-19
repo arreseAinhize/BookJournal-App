@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 // Desbloquear drawer
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
 
-                Log.d(TAG, "📍 Fragment principal: mostrando menús");
+                Log.d(TAG, "Fragment principal: mostrando menús");
 
                 // ============================================================
                 // FRAGMENTS DE AUTENTICACIÓN
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 // Bloquear drawer
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
-                Log.d(TAG, "📍 Fragment de autenticación: menús ocultos");
+                Log.d(TAG, "Fragment de autenticación: menús ocultos");
 
                 // ============================================================
                 // OTROS FRAGMENTS
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 // Bloquear drawer
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
-                Log.d(TAG, "📍 Otro fragment: menús ocultos");
+                Log.d(TAG, "Otro fragment: menús ocultos");
             }
         });
     }
@@ -153,12 +153,12 @@ public class MainActivity extends AppCompatActivity {
             // Modo horizontal: ocultar bottom nav, mostrar FAB
             bottomNavView.setVisibility(View.GONE);
             fabMenu.setVisibility(View.VISIBLE);
-            Log.d(TAG, "📱 LANDSCAPE: BottomNav GONE, FAB VISIBLE");
+            Log.d(TAG, "LANDSCAPE: BottomNav GONE, FAB VISIBLE");
         } else {
             // Modo vertical: mostrar bottom nav, ocultar FAB
             bottomNavView.setVisibility(View.VISIBLE);
             fabMenu.setVisibility(View.GONE);
-            Log.d(TAG, "📱 PORTRAIT: BottomNav VISIBLE, FAB GONE");
+            Log.d(TAG, "PORTRAIT: BottomNav VISIBLE, FAB GONE");
         }
     }
 

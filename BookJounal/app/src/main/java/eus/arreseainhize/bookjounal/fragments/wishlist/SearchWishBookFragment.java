@@ -175,7 +175,7 @@ public class SearchWishBookFragment extends Fragment {
                     Toast.makeText(requireContext(), R.string.book_saved, Toast.LENGTH_SHORT).show();
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(requireContext(), "✗ Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
     // ViewHolder

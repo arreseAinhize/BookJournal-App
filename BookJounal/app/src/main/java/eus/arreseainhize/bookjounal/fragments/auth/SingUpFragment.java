@@ -13,7 +13,6 @@ import androidx.navigation.Navigation;
 import eus.arreseainhize.bookjounal.R;
 import eus.arreseainhize.bookjounal.databinding.FragmentSingUpBinding;
 import eus.arreseainhize.bookjounal.utils.FirebaseAuthHelper;
-import eus.arreseainhize.bookjounal.utils.FirestoreHelper;
 import eus.arreseainhize.bookjounal.utils.FirestoreOfflineHelper;
 import eus.arreseainhize.bookjounal.utils.StringResourceHelper;
 
@@ -21,7 +20,6 @@ public class SingUpFragment extends Fragment {
 
     private FragmentSingUpBinding binding;
     private FirebaseAuthHelper authHelper;
-    private FirestoreHelper firestoreHelper;
     private StringResourceHelper stringHelper;
 
     @Override
@@ -36,7 +34,6 @@ public class SingUpFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         authHelper = new FirebaseAuthHelper(requireContext());
-        firestoreHelper = new FirestoreHelper();
         stringHelper = StringResourceHelper.getInstance(requireContext());
 
         binding.btnLogIn.setOnClickListener(v -> {
@@ -69,16 +66,16 @@ public class SingUpFragment extends Fragment {
                     new FirebaseAuthHelper.AuthCallback() {
                         @Override
                         public void onSuccess(com.google.firebase.auth.FirebaseUser user) {
-                            Log.d("Registro", "✅ Usuario creado en Auth: " + user.getUid());
+                            Log.d("Registro", "Usuario creado en Auth: " + user.getUid());
 
-                            // ✅ USAR FirestoreOfflineHelper también para registro
+                            // USAR FirestoreOfflineHelper también para registro
                             FirestoreOfflineHelper offlineHelper = new FirestoreOfflineHelper();
                             offlineHelper.createUserDocumentAlways(user, new FirestoreOfflineHelper.SimpleCallback() {
                                 @Override
                                 public void onSuccess(String userId) {
                                     binding.btnSingup.setEnabled(true);
 
-                                    Log.d("Firestore", "✅ Perfil creado en Firestore: " + userId);
+                                    Log.d("Firestore", "Perfil creado en Firestore: " + userId);
 
                                     Navigation.findNavController(view)
                                             .navigate(R.id.action_singUpFragment_to_homeFragment);
@@ -92,9 +89,9 @@ public class SingUpFragment extends Fragment {
                                 public void onError(String errorMessage) {
                                     binding.btnSingup.setEnabled(true);
 
-                                    Log.w("Firestore", "⚠️ Advertencia al crear perfil: " + errorMessage);
+                                    Log.w("Firestore", "Advertencia al crear perfil: " + errorMessage);
 
-                                    // ✅ AÚN ASÍ PERMITIR ACCESO
+                                    // AÚN ASÍ PERMITIR ACCESO
                                     Toast.makeText(requireContext(),
                                             R.string.success_account_created1,
                                             Toast.LENGTH_LONG).show();

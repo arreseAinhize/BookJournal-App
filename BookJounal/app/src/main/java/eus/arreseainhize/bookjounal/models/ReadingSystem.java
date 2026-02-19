@@ -49,7 +49,7 @@ public class ReadingSystem {
     public String getUserId() { return userId; }
     public void setUserId(String userId) { this.userId = userId; }
 
-    // Método para convertir a Map (útil para guardar en Firebase)
+    // Metodo para convertir a Map (útil para guardar en Firebase)
     public Map<String, Object> toMap() {
         Map<String, Object> map = new HashMap<>();
         map.put("star1Value", star1Value);

@@ -99,8 +99,6 @@ public class BookViewModel extends AndroidViewModel {
             }
         });
     }
-    // NUEVO: Método para obtener la sinopsis de una obra
-    // En BookViewModel.java, modifica el método fetchSynopsis:
 
     public void fetchSynopsis(String key, Book.VolumeInfo volumeInfo) {
         // Evitar llamadas duplicadas
@@ -124,14 +122,14 @@ public class BookViewModel extends AndroidViewModel {
                     String synopsis = response.body().getDescriptionText();
                     if (synopsis != null && !synopsis.isEmpty()) {
                         map.put(volumeInfo.title, synopsis);
-                        Log.d(Tag, "✅ Sinopsis obtenida para: " + volumeInfo.title);
+                        Log.d(Tag, "Sinopsis obtenida para: " + volumeInfo.title);
                     } else {
                         map.put(volumeInfo.title, String.valueOf(R.string.no_available_sinopsis));
-                        Log.d(Tag, "⚠️ Sinopsis vacía para: " + volumeInfo.title);
+                        Log.d(Tag, "Sinopsis vacía para: " + volumeInfo.title);
                     }
                 } else {
                     map.put(volumeInfo.title, String.valueOf(R.string.error_loading_synopsis));
-                    Log.e(Tag, "❌ Error obteniendo sinopsis para: " + volumeInfo.title);
+                    Log.e(Tag, "Error obteniendo sinopsis para: " + volumeInfo.title);
                 }
                 synopsisMap.postValue(map);
             }
@@ -142,7 +140,7 @@ public class BookViewModel extends AndroidViewModel {
                 if (map == null) map = new HashMap<>();
                 map.put(volumeInfo.title, String.valueOf(R.string.error_conexion));
                 synopsisMap.postValue(map);
-                Log.e(Tag, "❌ Error de conexión: " + t.getMessage());
+                Log.e(Tag, "Error de conexión: " + t.getMessage());
             }
         });
     }

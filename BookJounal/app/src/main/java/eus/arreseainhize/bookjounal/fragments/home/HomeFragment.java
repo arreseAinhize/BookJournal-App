@@ -10,16 +10,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentSnapshot;
 import eus.arreseainhize.bookjounal.R;
 import eus.arreseainhize.bookjounal.databinding.FragmentHomeBinding;
-import eus.arreseainhize.bookjounal.utils.FirestoreHelper;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private FirebaseAuth mAuth;
-    private FirestoreHelper firestoreHelper;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,7 +30,6 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         mAuth = FirebaseAuth.getInstance();
-        firestoreHelper = new FirestoreHelper();
 
         // Setup click listeners
         binding.btnBFavorite.setOnClickListener(v -> {

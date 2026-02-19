@@ -18,7 +18,7 @@ public class FirestoreOfflineHelper {
         db = FirebaseFirestore.getInstance();
     }
 
-    // ✅ MÉTODO MEJORADO CON VERIFICACIÓN
+    // METODO MEJORADO CON VERIFICACIÓN
     public void createUserDocumentAlways(FirebaseUser firebaseUser, SimpleCallback callback) {
         if (firebaseUser == null) {
             callback.onError("Usuario no autenticado");
@@ -26,9 +26,9 @@ public class FirestoreOfflineHelper {
         }
 
         String userId = firebaseUser.getUid();
-        Log.d(TAG, "🔄 Creando documento para: " + userId);
+        Log.d(TAG, "Creando documento para: " + userId);
 
-        // ✅ 1. PRIMERO VERIFICAR QUE FIRESTORE ESTÁ ACTIVO
+        // 1. PRIMERO VERIFICAR QUE FIRESTORE ESTÁ ACTIVO
         verifyFirestoreConnection(userId, firebaseUser, callback);
     }
 
@@ -38,12 +38,12 @@ public class FirestoreOfflineHelper {
                 .get()
                 .addOnCompleteListener(testTask -> {
                     if (testTask.isSuccessful()) {
-                        // ✅ Firestore está activo - crear documento real
-                        Log.d(TAG, "✅ Firestore activo - creando documento");
+                        // Firestore está activo - crear documento real
+                        Log.d(TAG, "Firestore activo - creando documento");
                         createActualDocument(userId, firebaseUser, callback);
                     } else {
                         Exception ex = testTask.getException();
-                        Log.w(TAG, "⚠️ Firestore puede tener problemas: " + ex.getMessage());
+                        Log.w(TAG, "Firestore puede tener problemas: " + ex.getMessage());
 
                         // Aún así intentar crear el documento
                         createActualDocument(userId, firebaseUser, callback);
@@ -70,24 +70,24 @@ public class FirestoreOfflineHelper {
             userData.put("profile_image_url", firebaseUser.getPhotoUrl().toString());
         }
 
-        // ✅ INTENTAR CREAR EL DOCUMENTO REAL
+        // INTENTAR CREAR EL DOCUMENTO REAL
         db.collection("usuarios").document(userId)
                 .set(userData, SetOptions.merge())
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        Log.d(TAG, "✅ Documento creado exitosamente en Firestore: " + userId);
+                        Log.d(TAG, "Documento creado exitosamente en Firestore: " + userId);
                         callback.onSuccess(userId);
                     } else {
                         Exception exception = task.getException();
-                        Log.e(TAG, "❌ Error creando documento: " + exception.getMessage());
+                        Log.e(TAG, "Error creando documento: " + exception.getMessage());
 
-                        // ✅ AÚN ASÍ PERMITIR ACCESO
+                        // AÚN ASÍ PERMITIR ACCESO
                         callback.onSuccess(userId + "_fallback");
 
                         // Mostrar advertencia
                         if (exception instanceof FirebaseFirestoreException) {
                             FirebaseFirestoreException fEx = (FirebaseFirestoreException) exception;
-                            Log.e(TAG, "❌ Código error: " + fEx.getCode());
+                            Log.e(TAG, "Código error: " + fEx.getCode());
                         }
                     }
                 });

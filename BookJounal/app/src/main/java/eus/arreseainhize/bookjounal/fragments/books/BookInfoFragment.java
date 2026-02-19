@@ -72,7 +72,7 @@ public class BookInfoFragment extends Fragment {
         // VERIFICAR QUE EL BINDING NO ES NULL
         // ============================================================
         if (binding == null) {
-            Log.e(TAG, "❌ ERROR: binding es null");
+            Log.e(TAG, "ERROR: binding es null");
             return;
         }
 
@@ -90,16 +90,16 @@ public class BookInfoFragment extends Fragment {
                         .setNegativeButton(R.string.btnNo, null)
                         .show();
             });
-            Log.d(TAG, "✅ btnBack configurado correctamente");
+            Log.d(TAG, "btnBack configurado correctamente");
         } else {
-            Log.e(TAG, "❌ ERROR: btnBack es null en el layout");
+            Log.e(TAG, "ERROR: btnBack es null en el layout");
         }
 
         // ============================================================
         // VERIFICAR QUE EL RECYCLERVIEW EXISTE
         // ============================================================
         if (binding.recyclerviewWScontents == null) {
-            Log.e(TAG, "❌ ERROR: recyclerviewWScontents es null");
+            Log.e(TAG, "ERROR: recyclerviewWScontents es null");
             return;
         }
 
@@ -114,7 +114,7 @@ public class BookInfoFragment extends Fragment {
         // VERIFICAR QUE EL SEARCHVIEW EXISTE
         // ============================================================
         if (binding.text == null) {
-            Log.e(TAG, "❌ ERROR: SearchView (text) es null");
+            Log.e(TAG, "ERROR: SearchView (text) es null");
             return;
         }
 

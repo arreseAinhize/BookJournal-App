@@ -131,12 +131,12 @@ class GoogleSignInHelper(
         val offlineHelper = FirestoreOfflineHelper()
         offlineHelper.createUserDocumentAlways(user, object : FirestoreOfflineHelper.SimpleCallback {
             override fun onSuccess(userId: String) {
-                Log.d(tag, "✅ ${fragment.getString(R.string.data_saved)}: $userId")
+                Log.d(tag, "${fragment.getString(R.string.data_saved)}: $userId")
                 callback.onFirestoreUserCreated(userId)
             }
 
             override fun onError(errorMessage: String) {
-                Log.w(tag, "⚠️ ${fragment.getString(R.string.error_unknown)}: $errorMessage")
+                Log.w(tag, " ${fragment.getString(R.string.error_unknown)}: $errorMessage")
                 callback.onFirestoreUserCreated(user.uid)
             }
         })

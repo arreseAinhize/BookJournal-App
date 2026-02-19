@@ -71,7 +71,7 @@ public class LogInFragment extends Fragment {
         googleSignInHelper.signIn(new GoogleSignInHelper.GoogleAuthCallback() {
             @Override
             public void onSuccess(FirebaseUser user) {
-                Log.d(TAG, "✅ Google auth success: " + user.getUid());
+                Log.d(TAG, "Google auth success: " + user.getUid());
             }
 
             @Override
@@ -84,7 +84,7 @@ public class LogInFragment extends Fragment {
 
             @Override
             public void onFirestoreUserCreated(String userId) {
-                Log.d(TAG, "✅ Usuario listo, navegando a home");
+                Log.d(TAG, "Usuario listo, navegando a home");
                 Navigation.findNavController(binding.getRoot())
                         .navigate(R.id.action_logInFragment_to_homeFragment);
                 Toast.makeText(requireContext(),
@@ -133,7 +133,7 @@ public class LogInFragment extends Fragment {
                 new FirebaseAuthHelper.AuthCallback() {
                     @Override
                     public void onSuccess(FirebaseUser user) {
-                        Log.d(TAG, "✅ Email auth success: " + user.getUid());
+                        Log.d(TAG, "Email auth success: " + user.getUid());
                         createFirestoreUserDocument(user, view);
                     }
 
@@ -159,7 +159,7 @@ public class LogInFragment extends Fragment {
             @Override
             public void onError(String errorMessage) {
                 binding.btnLogin.setEnabled(true);
-                Log.w(TAG, "⚠️ Firestore warning: " + errorMessage);
+                Log.w(TAG, "Firestore warning: " + errorMessage);
                 navigateToHome(view);
             }
         });

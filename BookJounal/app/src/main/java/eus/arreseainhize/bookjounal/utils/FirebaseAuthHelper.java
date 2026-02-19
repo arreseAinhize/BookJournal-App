@@ -1,8 +1,7 @@
 package eus.arreseainhize.bookjounal.utils;
 
 import android.content.Context;
-import android.widget.Toast;
-import com.google.firebase.auth.AuthResult;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseUser;
